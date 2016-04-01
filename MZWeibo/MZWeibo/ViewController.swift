@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print("检测终端命令行")
+        print("再来一次")
     }
 
     override func didReceiveMemoryWarning() {
