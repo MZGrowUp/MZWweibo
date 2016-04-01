@@ -1,0 +1,507 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C85F541E1CAE17AE00218EE3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85F541D1CAE17AE00218EE3 /* AppDelegate.swift */; };
+		C85F54201CAE17AE00218EE3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85F541F1CAE17AE00218EE3 /* ViewController.swift */; };
+		C85F54231CAE17AE00218EE3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C85F54211CAE17AE00218EE3 /* Main.storyboard */; };
+		C85F54251CAE17AE00218EE3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C85F54241CAE17AE00218EE3 /* Assets.xcassets */; };
+		C85F54281CAE17AE00218EE3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C85F54261CAE17AE00218EE3 /* LaunchScreen.storyboard */; };
+		C85F54331CAE17AE00218EE3 /* MZWeiboTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85F54321CAE17AE00218EE3 /* MZWeiboTests.swift */; };
+		C85F543E1CAE17AE00218EE3 /* MZWeiboUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85F543D1CAE17AE00218EE3 /* MZWeiboUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C85F542F1CAE17AE00218EE3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C85F54121CAE17AE00218EE3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C85F54191CAE17AE00218EE3;
+			remoteInfo = MZWeibo;
+		};
+		C85F543A1CAE17AE00218EE3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C85F54121CAE17AE00218EE3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C85F54191CAE17AE00218EE3;
+			remoteInfo = MZWeibo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C85F541A1CAE17AE00218EE3 /* MZWeibo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MZWeibo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C85F541D1CAE17AE00218EE3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C85F541F1CAE17AE00218EE3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C85F54221CAE17AE00218EE3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C85F54241CAE17AE00218EE3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C85F54271CAE17AE00218EE3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C85F54291CAE17AE00218EE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C85F542E1CAE17AE00218EE3 /* MZWeiboTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MZWeiboTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C85F54321CAE17AE00218EE3 /* MZWeiboTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MZWeiboTests.swift; sourceTree = "<group>"; };
+		C85F54341CAE17AE00218EE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C85F54391CAE17AE00218EE3 /* MZWeiboUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MZWeiboUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C85F543D1CAE17AE00218EE3 /* MZWeiboUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MZWeiboUITests.swift; sourceTree = "<group>"; };
+		C85F543F1CAE17AE00218EE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C85F54171CAE17AE00218EE3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C85F542B1CAE17AE00218EE3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C85F54361CAE17AE00218EE3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C85F54111CAE17AE00218EE3 = {
+			isa = PBXGroup;
+			children = (
+				C85F541C1CAE17AE00218EE3 /* MZWeibo */,
+				C85F54311CAE17AE00218EE3 /* MZWeiboTests */,
+				C85F543C1CAE17AE00218EE3 /* MZWeiboUITests */,
+				C85F541B1CAE17AE00218EE3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C85F541B1CAE17AE00218EE3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C85F541A1CAE17AE00218EE3 /* MZWeibo.app */,
+				C85F542E1CAE17AE00218EE3 /* MZWeiboTests.xctest */,
+				C85F54391CAE17AE00218EE3 /* MZWeiboUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C85F541C1CAE17AE00218EE3 /* MZWeibo */ = {
+			isa = PBXGroup;
+			children = (
+				C85F541D1CAE17AE00218EE3 /* AppDelegate.swift */,
+				C85F541F1CAE17AE00218EE3 /* ViewController.swift */,
+				C85F54211CAE17AE00218EE3 /* Main.storyboard */,
+				C85F54241CAE17AE00218EE3 /* Assets.xcassets */,
+				C85F54261CAE17AE00218EE3 /* LaunchScreen.storyboard */,
+				C85F54291CAE17AE00218EE3 /* Info.plist */,
+			);
+			path = MZWeibo;
+			sourceTree = "<group>";
+		};
+		C85F54311CAE17AE00218EE3 /* MZWeiboTests */ = {
+			isa = PBXGroup;
+			children = (
+				C85F54321CAE17AE00218EE3 /* MZWeiboTests.swift */,
+				C85F54341CAE17AE00218EE3 /* Info.plist */,
+			);
+			path = MZWeiboTests;
+			sourceTree = "<group>";
+		};
+		C85F543C1CAE17AE00218EE3 /* MZWeiboUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C85F543D1CAE17AE00218EE3 /* MZWeiboUITests.swift */,
+				C85F543F1CAE17AE00218EE3 /* Info.plist */,
+			);
+			path = MZWeiboUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C85F54191CAE17AE00218EE3 /* MZWeibo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C85F54421CAE17AE00218EE3 /* Build configuration list for PBXNativeTarget "MZWeibo" */;
+			buildPhases = (
+				C85F54161CAE17AE00218EE3 /* Sources */,
+				C85F54171CAE17AE00218EE3 /* Frameworks */,
+				C85F54181CAE17AE00218EE3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MZWeibo;
+			productName = MZWeibo;
+			productReference = C85F541A1CAE17AE00218EE3 /* MZWeibo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C85F542D1CAE17AE00218EE3 /* MZWeiboTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C85F54451CAE17AE00218EE3 /* Build configuration list for PBXNativeTarget "MZWeiboTests" */;
+			buildPhases = (
+				C85F542A1CAE17AE00218EE3 /* Sources */,
+				C85F542B1CAE17AE00218EE3 /* Frameworks */,
+				C85F542C1CAE17AE00218EE3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C85F54301CAE17AE00218EE3 /* PBXTargetDependency */,
+			);
+			name = MZWeiboTests;
+			productName = MZWeiboTests;
+			productReference = C85F542E1CAE17AE00218EE3 /* MZWeiboTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C85F54381CAE17AE00218EE3 /* MZWeiboUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C85F54481CAE17AE00218EE3 /* Build configuration list for PBXNativeTarget "MZWeiboUITests" */;
+			buildPhases = (
+				C85F54351CAE17AE00218EE3 /* Sources */,
+				C85F54361CAE17AE00218EE3 /* Frameworks */,
+				C85F54371CAE17AE00218EE3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C85F543B1CAE17AE00218EE3 /* PBXTargetDependency */,
+			);
+			name = MZWeiboUITests;
+			productName = MZWeiboUITests;
+			productReference = C85F54391CAE17AE00218EE3 /* MZWeiboUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C85F54121CAE17AE00218EE3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Déesse";
+				TargetAttributes = {
+					C85F54191CAE17AE00218EE3 = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+					C85F542D1CAE17AE00218EE3 = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = C85F54191CAE17AE00218EE3;
+					};
+					C85F54381CAE17AE00218EE3 = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = C85F54191CAE17AE00218EE3;
+					};
+				};
+			};
+			buildConfigurationList = C85F54151CAE17AE00218EE3 /* Build configuration list for PBXProject "MZWeibo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C85F54111CAE17AE00218EE3;
+			productRefGroup = C85F541B1CAE17AE00218EE3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C85F54191CAE17AE00218EE3 /* MZWeibo */,
+				C85F542D1CAE17AE00218EE3 /* MZWeiboTests */,
+				C85F54381CAE17AE00218EE3 /* MZWeiboUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C85F54181CAE17AE00218EE3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C85F54281CAE17AE00218EE3 /* LaunchScreen.storyboard in Resources */,
+				C85F54251CAE17AE00218EE3 /* Assets.xcassets in Resources */,
+				C85F54231CAE17AE00218EE3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C85F542C1CAE17AE00218EE3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C85F54371CAE17AE00218EE3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C85F54161CAE17AE00218EE3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C85F54201CAE17AE00218EE3 /* ViewController.swift in Sources */,
+				C85F541E1CAE17AE00218EE3 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C85F542A1CAE17AE00218EE3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C85F54331CAE17AE00218EE3 /* MZWeiboTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C85F54351CAE17AE00218EE3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C85F543E1CAE17AE00218EE3 /* MZWeiboUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C85F54301CAE17AE00218EE3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C85F54191CAE17AE00218EE3 /* MZWeibo */;
+			targetProxy = C85F542F1CAE17AE00218EE3 /* PBXContainerItemProxy */;
+		};
+		C85F543B1CAE17AE00218EE3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C85F54191CAE17AE00218EE3 /* MZWeibo */;
+			targetProxy = C85F543A1CAE17AE00218EE3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C85F54211CAE17AE00218EE3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C85F54221CAE17AE00218EE3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C85F54261CAE17AE00218EE3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C85F54271CAE17AE00218EE3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C85F54401CAE17AE00218EE3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C85F54411CAE17AE00218EE3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C85F54431CAE17AE00218EE3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = MZWeibo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = NNMM.MZWeibo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		C85F54441CAE17AE00218EE3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = MZWeibo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = NNMM.MZWeibo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		C85F54461CAE17AE00218EE3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = MZWeiboTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = NNMM.MZWeiboTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MZWeibo.app/MZWeibo";
+			};
+			name = Debug;
+		};
+		C85F54471CAE17AE00218EE3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = MZWeiboTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = NNMM.MZWeiboTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MZWeibo.app/MZWeibo";
+			};
+			name = Release;
+		};
+		C85F54491CAE17AE00218EE3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = MZWeiboUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = NNMM.MZWeiboUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = MZWeibo;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		C85F544A1CAE17AE00218EE3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = MZWeiboUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = NNMM.MZWeiboUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = MZWeibo;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C85F54151CAE17AE00218EE3 /* Build configuration list for PBXProject "MZWeibo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C85F54401CAE17AE00218EE3 /* Debug */,
+				C85F54411CAE17AE00218EE3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C85F54421CAE17AE00218EE3 /* Build configuration list for PBXNativeTarget "MZWeibo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C85F54431CAE17AE00218EE3 /* Debug */,
+				C85F54441CAE17AE00218EE3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		C85F54451CAE17AE00218EE3 /* Build configuration list for PBXNativeTarget "MZWeiboTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C85F54461CAE17AE00218EE3 /* Debug */,
+				C85F54471CAE17AE00218EE3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		C85F54481CAE17AE00218EE3 /* Build configuration list for PBXNativeTarget "MZWeiboUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C85F54491CAE17AE00218EE3 /* Debug */,
+				C85F544A1CAE17AE00218EE3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C85F54121CAE17AE00218EE3 /* Project object */;
+}
