@@ -15,13 +15,12 @@ class ViewController: UIViewController {
         print("检测终端命令行")
         print("再来一次")
         print("完美世界")
+        
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    private func aaa() {
+        print("嘿嘿，囡囡,啦啦啦,I Love you")
     }
-
 
 }
 
