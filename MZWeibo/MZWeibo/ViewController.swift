@@ -14,6 +14,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         print("检测终端命令行")
         print("再来一次")
+        print("完美世界")
     }
 
     override func didReceiveMemoryWarning() {

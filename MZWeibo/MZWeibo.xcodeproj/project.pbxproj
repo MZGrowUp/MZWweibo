@@ -10,10 +10,10 @@
 		C85F541E1CAE17AE00218EE3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85F541D1CAE17AE00218EE3 /* AppDelegate.swift */; };
 		C85F54201CAE17AE00218EE3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85F541F1CAE17AE00218EE3 /* ViewController.swift */; };
 		C85F54231CAE17AE00218EE3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C85F54211CAE17AE00218EE3 /* Main.storyboard */; };
-		C85F54251CAE17AE00218EE3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C85F54241CAE17AE00218EE3 /* Assets.xcassets */; };
 		C85F54281CAE17AE00218EE3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C85F54261CAE17AE00218EE3 /* LaunchScreen.storyboard */; };
 		C85F54331CAE17AE00218EE3 /* MZWeiboTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85F54321CAE17AE00218EE3 /* MZWeiboTests.swift */; };
 		C85F543E1CAE17AE00218EE3 /* MZWeiboUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85F543D1CAE17AE00218EE3 /* MZWeiboUITests.swift */; };
+		C88D29311CB2AAC10051D460 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C88D29301CB2AAC10051D460 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +38,6 @@
 		C85F541D1CAE17AE00218EE3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C85F541F1CAE17AE00218EE3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C85F54221CAE17AE00218EE3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		C85F54241CAE17AE00218EE3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C85F54271CAE17AE00218EE3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C85F54291CAE17AE00218EE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C85F542E1CAE17AE00218EE3 /* MZWeiboTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MZWeiboTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,6 +46,7 @@
 		C85F54391CAE17AE00218EE3 /* MZWeiboUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MZWeiboUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C85F543D1CAE17AE00218EE3 /* MZWeiboUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MZWeiboUITests.swift; sourceTree = "<group>"; };
 		C85F543F1CAE17AE00218EE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C88D29301CB2AAC10051D460 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,9 +100,9 @@
 				C85F541D1CAE17AE00218EE3 /* AppDelegate.swift */,
 				C85F541F1CAE17AE00218EE3 /* ViewController.swift */,
 				C85F54211CAE17AE00218EE3 /* Main.storyboard */,
-				C85F54241CAE17AE00218EE3 /* Assets.xcassets */,
 				C85F54261CAE17AE00218EE3 /* LaunchScreen.storyboard */,
 				C85F54291CAE17AE00218EE3 /* Info.plist */,
+				C88D29301CB2AAC10051D460 /* Assets.xcassets */,
 			);
 			path = MZWeibo;
 			sourceTree = "<group>";
@@ -230,7 +230,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C85F54281CAE17AE00218EE3 /* LaunchScreen.storyboard in Resources */,
-				C85F54251CAE17AE00218EE3 /* Assets.xcassets in Resources */,
+				C88D29311CB2AAC10051D460 /* Assets.xcassets in Resources */,
 				C85F54231CAE17AE00218EE3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -399,7 +399,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = MZWeibo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = NNMM.MZWeibo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -410,7 +412,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = MZWeibo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = NNMM.MZWeibo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -484,6 +488,7 @@
 				C85F54441CAE17AE00218EE3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C85F54451CAE17AE00218EE3 /* Build configuration list for PBXNativeTarget "MZWeiboTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +497,7 @@
 				C85F54471CAE17AE00218EE3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C85F54481CAE17AE00218EE3 /* Build configuration list for PBXNativeTarget "MZWeiboUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +506,7 @@
 				C85F544A1CAE17AE00218EE3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
