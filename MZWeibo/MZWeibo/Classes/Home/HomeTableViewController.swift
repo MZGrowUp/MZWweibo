@@ -22,6 +22,10 @@ class HomeTableViewController: BaseTableViewController {
         //初始化导航条
         setUpNavgation()
     }
+    func titleBtnClick(btn: TitleButton){
+        btn.selected = !btn.selected
+    }
+
     func leftBtnClick(){
         print(__FUNCTION__)
     }
@@ -36,6 +40,11 @@ class HomeTableViewController: BaseTableViewController {
         */
         navigationItem.leftBarButtonItem = UIBarButtonItem.creatBarButton("navigationbar_friendattention", target: self, action: "leftBtnClick")
         navigationItem.rightBarButtonItem = UIBarButtonItem.creatBarButton("navigationbar_pop", target: self, action: "rightBtnClick")
+        //设置标题
+        let titleBtn = TitleButton()
+        titleBtn.setTitle("N小姐的M先生", forState: UIControlState.Normal)
+        titleBtn.addTarget(self, action: "titleBtnClick:", forControlEvents: UIControlEvents.TouchUpInside)
+        navigationItem.titleView = titleBtn
         
     }
     /*
