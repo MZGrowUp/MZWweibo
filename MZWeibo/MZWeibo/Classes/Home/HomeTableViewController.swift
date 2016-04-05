@@ -8,10 +8,15 @@
 
 import UIKit
 
-class HomeTableViewController: UITableViewController {
+class HomeTableViewController: BaseTableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        //如果没有登陆，就设置未登录界面
+        if !userLogin
+        {
+            visitorView?.setUpVisitorViewInfo(true, imageName: "", message: "")
+        }
     }
 }

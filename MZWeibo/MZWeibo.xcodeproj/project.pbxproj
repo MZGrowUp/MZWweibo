@@ -12,6 +12,8 @@
 		C85F54331CAE17AE00218EE3 /* MZWeiboTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85F54321CAE17AE00218EE3 /* MZWeiboTests.swift */; };
 		C85F543E1CAE17AE00218EE3 /* MZWeiboUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85F543D1CAE17AE00218EE3 /* MZWeiboUITests.swift */; };
 		C88D29311CB2AAC10051D460 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C88D29301CB2AAC10051D460 /* Assets.xcassets */; };
+		C8F6D29F1CB3997E00DA08C7 /* VisitorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F6D29E1CB3997E00DA08C7 /* VisitorView.swift */; };
+		C8F6D2A11CB39F4400DA08C7 /* UIView+AutoLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F6D2A01CB39F4400DA08C7 /* UIView+AutoLayout.swift */; };
 		C8F8C9DE1CB3548C0008BA2E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F8C9DD1CB3548C0008BA2E /* MainViewController.swift */; };
 		C8F8C9E01CB354A40008BA2E /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F8C9DF1CB354A40008BA2E /* HomeTableViewController.swift */; };
 		C8F8C9E21CB354AF0008BA2E /* DiscoverTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F8C9E11CB354AF0008BA2E /* DiscoverTableViewController.swift */; };
@@ -19,6 +21,7 @@
 		C8F8C9E61CB354D20008BA2E /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F8C9E51CB354D20008BA2E /* ProfileTableViewController.swift */; };
 		C8F8C9EA1CB35C470008BA2E /* MainVCSettings.json in Resources */ = {isa = PBXBuildFile; fileRef = C8F8C9E81CB35C470008BA2E /* MainVCSettings.json */; };
 		C8F8C9EB1CB35C470008BA2E /* NullViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F8C9E91CB35C470008BA2E /* NullViewController.swift */; };
+		C8F8C9ED1CB395E10008BA2E /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F8C9EC1CB395E10008BA2E /* BaseTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +53,8 @@
 		C85F543D1CAE17AE00218EE3 /* MZWeiboUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MZWeiboUITests.swift; sourceTree = "<group>"; };
 		C85F543F1CAE17AE00218EE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C88D29301CB2AAC10051D460 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C8F6D29E1CB3997E00DA08C7 /* VisitorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisitorView.swift; sourceTree = "<group>"; };
+		C8F6D2A01CB39F4400DA08C7 /* UIView+AutoLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+AutoLayout.swift"; sourceTree = "<group>"; };
 		C8F8C9DD1CB3548C0008BA2E /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		C8F8C9DF1CB354A40008BA2E /* HomeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
 		C8F8C9E11CB354AF0008BA2E /* DiscoverTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverTableViewController.swift; sourceTree = "<group>"; };
@@ -57,6 +62,7 @@
 		C8F8C9E51CB354D20008BA2E /* ProfileTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
 		C8F8C9E81CB35C470008BA2E /* MainVCSettings.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MainVCSettings.json; sourceTree = "<group>"; };
 		C8F8C9E91CB35C470008BA2E /* NullViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NullViewController.swift; sourceTree = "<group>"; };
+		C8F8C9EC1CB395E10008BA2E /* BaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +182,8 @@
 			children = (
 				C8F8C9E71CB35C470008BA2E /* Resource */,
 				C8F8C9DD1CB3548C0008BA2E /* MainViewController.swift */,
+				C8F8C9EC1CB395E10008BA2E /* BaseTableViewController.swift */,
+				C8F6D29E1CB3997E00DA08C7 /* VisitorView.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -199,6 +207,7 @@
 		C8F8C9DC1CB354020008BA2E /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				C8F6D2A01CB39F4400DA08C7 /* UIView+AutoLayout.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -345,9 +354,12 @@
 			files = (
 				C8F8C9E61CB354D20008BA2E /* ProfileTableViewController.swift in Sources */,
 				C8F8C9E01CB354A40008BA2E /* HomeTableViewController.swift in Sources */,
+				C8F8C9ED1CB395E10008BA2E /* BaseTableViewController.swift in Sources */,
 				C85F541E1CAE17AE00218EE3 /* AppDelegate.swift in Sources */,
 				C8F8C9E41CB354C60008BA2E /* MessageTableViewController.swift in Sources */,
+				C8F6D2A11CB39F4400DA08C7 /* UIView+AutoLayout.swift in Sources */,
 				C8F8C9E21CB354AF0008BA2E /* DiscoverTableViewController.swift in Sources */,
+				C8F6D29F1CB3997E00DA08C7 /* VisitorView.swift in Sources */,
 				C8F8C9DE1CB3548C0008BA2E /* MainViewController.swift in Sources */,
 				C8F8C9EB1CB35C470008BA2E /* NullViewController.swift in Sources */,
 			);

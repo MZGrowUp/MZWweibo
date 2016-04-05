@@ -8,10 +8,14 @@
 
 import UIKit
 
-class MessageTableViewController: UITableViewController {
+class MessageTableViewController: BaseTableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        if !userLogin
+        {
+            visitorView?.setUpVisitorViewInfo(false, imageName: "visitordiscover_image_message", message: "")
+        }
 
     }
 

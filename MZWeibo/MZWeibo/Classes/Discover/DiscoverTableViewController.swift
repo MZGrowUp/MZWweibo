@@ -8,10 +8,14 @@
 
 import UIKit
 
-class DiscoverTableViewController: UITableViewController {
+class DiscoverTableViewController: BaseTableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        if !userLogin
+        {
+            visitorView?.setUpVisitorViewInfo(false, imageName: "visitordiscover_image_message", message: "")
+        }
 
     }
 }
