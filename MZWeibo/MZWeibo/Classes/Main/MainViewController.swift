@@ -14,6 +14,37 @@ class MainViewController: UITabBarController {
         super.viewDidLoad()
         //当前控制器对应tabBar的颜色
         tabBar.tintColor = UIColor.orangeColor()
+        //添加所有子控制器
+        addChildViewControllers()
+        print(tabBar.subviews)
+    }
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        print("-------------")
+        print(tabBar.subviews)
+        //添加加号按钮
+        addComposeBtn()
+        
+    }
+    private func addComposeBtn(){
+        tabBar.addSubview(composeBtn)
+        //调整加号按钮的宽度
+        let width = UIScreen.mainScreen().bounds.size.width / CGFloat(viewControllers!.count)
+        let rect = CGRect(x: 0, y: 0, width: width, height: 49)
+        //第一个参数是frame得大小 
+        //第二个参数是x方向偏移的大小
+        //第三个参数是y方向偏移的大小
+        composeBtn.frame = CGRectOffset(rect, 2*width, 0)
+    }
+    //加号按钮事件 注意点：监听按钮点击的方法不能是私有方法
+     func composeBtnClick(){
+        print("加号按钮事件")
+
+    }
+    /**
+     添加所有子控制器
+     */
+    private func addChildViewControllers() {
         //1、获取JSON文件的路径
         let path = NSBundle.mainBundle().pathForResource("MainVCSettings.json", ofType: nil)
         //2、通过文件路径创建NSData，进行判断path 一定不为空
@@ -34,15 +65,15 @@ class MainViewController: UITabBarController {
                     //报错的原因：addChildViewController参数必须有值，但字典的返回值为可选类型
                     addChildViewController(dict["vcName"]!, title: dict["title"]!, imageName: dict["imageName"]!)
                 }
- 
             }catch
             {
-               //发生异常之后执行的代码
+                //发生异常之后执行的代码
                 print(error)
                 //1、创建首页
                 addChildViewController("HomeTableViewController", title: "首页", imageName: "tabbar_home")
                 //2、
                 addChildViewController("DiscoverTableViewController", title: "广场", imageName: "tabbar_discover")
+                addChildViewController("NullViewController", title: "", imageName: "")
                 //3、
                 addChildViewController("MessageTableViewController", title: "消息", imageName: "tabbar_message_center")
                 //4、
@@ -50,6 +81,7 @@ class MainViewController: UITabBarController {
             }
         }
     }
+    
     /**
      初始化子控制器
      
@@ -80,25 +112,16 @@ class MainViewController: UITabBarController {
         //3、将导航控制器添加到当前控制器上
         addChildViewController(navHome)
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+   //懒加载
+    private lazy var composeBtn: UIButton = {
+        let btn = UIButton()
+        // 设置前景图片
+        btn.setImage(UIImage(named: "tabbar_compose_icon_add"), forState: UIControlState.Normal)
+        btn.setImage(UIImage(named: "tabbar_compose_icon_add_highlighted"), forState: UIControlState.Highlighted)
+        //设置背景图片
+        btn.setBackgroundImage(UIImage(named: "tabbar_compose_button"), forState: UIControlState.Normal)
+        btn.setBackgroundImage(UIImage(named: "tabbar_compose_button_highlighted"), forState: UIControlState.Highlighted)
+        btn.addTarget(self, action: "composeBtnClick", forControlEvents: UIControlEvents.TouchUpInside)
+        return btn
+    }()
 }

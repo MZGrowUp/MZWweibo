@@ -21,11 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //设置跟视图控制器
         window?.rootViewController = MainViewController()
         window?.makeKeyAndVisible()
-        
         return true
     }
-
-
-
 }
 
