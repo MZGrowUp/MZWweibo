@@ -70,7 +70,7 @@ class HomeTableViewController: BaseTableViewController {
 */
 }
 // MARK: - UIViewControllerTransitioningDelegate
-extension HomeTableViewController: UIViewControllerTransitioningDelegate
+extension HomeTableViewController: UIViewControllerTransitioningDelegate,UIViewControllerAnimatedTransitioning
 {
     //实现代理方法，谁来负责转场动画
     //UIPresentationController 是iOS8专门负责转场动画的
@@ -78,6 +78,47 @@ extension HomeTableViewController: UIViewControllerTransitioningDelegate
     {
         
         return PopverPresentationController(presentedViewController: presented, presentingViewController: presenting)
+        
+    }
+    /**
+     告诉系统谁来负责model的展现动画
+     
+     - parameter presented:  被展现的视图
+     - parameter presenting: 发起的视图
+     - parameter source:
+     
+     - returns: 谁来负责
+     */
+    func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning?
+    {
+        return self
+    }
+    /**
+     告诉系统谁来负责model的消失动画
+     
+     - parameter dismissed: 被关闭的视图
+     
+     - returns: 谁。。。
+     */
+    func animationControllerForDismissedController(dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning?
+    {
+        return self
+    }
+    //MARK: - UIViewControllerAnimatedTransitioning
+    /**
+    返回动画时长
+    
+    - parameter transitionContext: 上下文，里面保存了动画的所有参数
+    
+    - returns: 动画时长
+    */
+    func transitionDuration(transitionContext: UIViewControllerContextTransitioning?) -> NSTimeInterval
+    {
+        return 20
+    }
+    
+    func animateTransition(transitionContext: UIViewControllerContextTransitioning)
+    {
         
     }
 }
