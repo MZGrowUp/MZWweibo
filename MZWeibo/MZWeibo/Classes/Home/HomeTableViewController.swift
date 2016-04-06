@@ -68,6 +68,8 @@ class HomeTableViewController: BaseTableViewController {
         return UIBarButtonItem(customView: btn)
     }
 */
+    /// 记录当前是否展开
+    var ispresent: Bool = false
 }
 // MARK: - UIViewControllerTransitioningDelegate
 extension HomeTableViewController: UIViewControllerTransitioningDelegate,UIViewControllerAnimatedTransitioning
@@ -80,6 +82,7 @@ extension HomeTableViewController: UIViewControllerTransitioningDelegate,UIViewC
         return PopverPresentationController(presentedViewController: presented, presentingViewController: presenting)
         
     }
+    //MARK: - 只要实现了以下方法，那么系统自带的默认动画就没有了，所以东西都需要程序猿自己来实现
     /**
      告诉系统谁来负责model的展现动画
      
@@ -91,6 +94,7 @@ extension HomeTableViewController: UIViewControllerTransitioningDelegate,UIViewC
      */
     func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning?
     {
+        ispresent = true
         return self
     }
     /**
@@ -102,6 +106,7 @@ extension HomeTableViewController: UIViewControllerTransitioningDelegate,UIViewC
      */
     func animationControllerForDismissedController(dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning?
     {
+        ispresent = false
         return self
     }
     //MARK: - UIViewControllerAnimatedTransitioning
@@ -114,11 +119,54 @@ extension HomeTableViewController: UIViewControllerTransitioningDelegate,UIViewC
     */
     func transitionDuration(transitionContext: UIViewControllerContextTransitioning?) -> NSTimeInterval
     {
-        return 20
+        return 1
     }
     
     func animateTransition(transitionContext: UIViewControllerContextTransitioning)
     {
-        
-    }
+        //1、拿到展现的视图
+//        let toVC = transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey)
+//        let fromVC = transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey)
+        //通过打印发现需要修改的就是toVC上面的View
+//        print(toVC)
+//        print(fromVC)
+        if ispresent
+        {
+            print("展开")
+            let toView = transitionContext.viewForKey(UITransitionContextToViewKey)!
+            toView.transform = CGAffineTransformMakeScale(1.0, 0.0)
+            //注意：一定要将视图添加到容器上
+            transitionContext.containerView()?.addSubview(toView)
+            //设置锚点
+            toView.layer.anchorPoint = CGPoint(x: 0.5, y: 0)
+            //2、执行动画
+            UIView.animateWithDuration(0.5, animations: { () -> Void in
+                //清空transform
+                toView.transform = CGAffineTransformIdentity
+                }) { (_) -> Void in
+                    //动画执行完毕，一定要告诉系统
+                    //如果不写，可能发生未知的错误
+                    transitionContext.completeTransition(true)
+            }
+
+        }else
+        {
+            print("关闭")
+            //需要关闭
+            let fromView = transitionContext.viewForKey(UITransitionContextFromViewKey)!
+            UIView.animateWithDuration(0.2, animations: { () -> Void in
+                //压扁
+                //注意：由于CGFloat是不准确的，所以如果写0.0会没有动画
+                fromView.transform = CGAffineTransformMakeScale(1.0, 0.000001)
+                }, completion: { (_) -> Void in
+                    //动画执行完毕，一定要告诉系统
+                    //如果不写，可能发生未知的错误
+                    transitionContext.completeTransition(true)
+    
+            })
+
+        }
+    
+   }
+
 }
