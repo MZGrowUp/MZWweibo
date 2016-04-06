@@ -13,6 +13,9 @@
 		C85F543E1CAE17AE00218EE3 /* MZWeiboUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85F543D1CAE17AE00218EE3 /* MZWeiboUITests.swift */; };
 		C87980701CB40B6E001FB715 /* UIBarButtonItem+category.swift in Sources */ = {isa = PBXBuildFile; fileRef = C879806F1CB40B6E001FB715 /* UIBarButtonItem+category.swift */; };
 		C87980721CB411BE001FB715 /* TitleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87980711CB411BE001FB715 /* TitleButton.swift */; };
+		C87980751CB49A3B001FB715 /* PopcoverViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C87980741CB49A3B001FB715 /* PopcoverViewController.storyboard */; };
+		C87980771CB4A12F001FB715 /* PopverPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87980761CB4A12F001FB715 /* PopverPresentationController.swift */; };
+		C87980791CB4A550001FB715 /* PopverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87980781CB4A550001FB715 /* PopverViewController.swift */; };
 		C88D29311CB2AAC10051D460 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C88D29301CB2AAC10051D460 /* Assets.xcassets */; };
 		C8F6D29F1CB3997E00DA08C7 /* VisitorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F6D29E1CB3997E00DA08C7 /* VisitorView.swift */; };
 		C8F6D2A11CB39F4400DA08C7 /* UIView+AutoLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F6D2A01CB39F4400DA08C7 /* UIView+AutoLayout.swift */; };
@@ -56,6 +59,9 @@
 		C85F543F1CAE17AE00218EE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C879806F1CB40B6E001FB715 /* UIBarButtonItem+category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+category.swift"; sourceTree = "<group>"; };
 		C87980711CB411BE001FB715 /* TitleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleButton.swift; sourceTree = "<group>"; };
+		C87980741CB49A3B001FB715 /* PopcoverViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PopcoverViewController.storyboard; sourceTree = "<group>"; };
+		C87980761CB4A12F001FB715 /* PopverPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopverPresentationController.swift; sourceTree = "<group>"; };
+		C87980781CB4A550001FB715 /* PopverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopverViewController.swift; sourceTree = "<group>"; };
 		C88D29301CB2AAC10051D460 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C8F6D29E1CB3997E00DA08C7 /* VisitorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisitorView.swift; sourceTree = "<group>"; };
 		C8F6D2A01CB39F4400DA08C7 /* UIView+AutoLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+AutoLayout.swift"; sourceTree = "<group>"; };
@@ -144,6 +150,16 @@
 			path = MZWeiboUITests;
 			sourceTree = "<group>";
 		};
+		C87980731CB499F4001FB715 /* Popover */ = {
+			isa = PBXGroup;
+			children = (
+				C87980741CB49A3B001FB715 /* PopcoverViewController.storyboard */,
+				C87980761CB4A12F001FB715 /* PopverPresentationController.swift */,
+				C87980781CB4A550001FB715 /* PopverViewController.swift */,
+			);
+			path = Popover;
+			sourceTree = "<group>";
+		};
 		C8F8C9D51CB354020008BA2E /* Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -178,6 +194,7 @@
 		C8F8C9D81CB354020008BA2E /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				C87980731CB499F4001FB715 /* Popover */,
 				C8F8C9DF1CB354A40008BA2E /* HomeTableViewController.swift */,
 			);
 			path = Home;
@@ -334,6 +351,7 @@
 				C85F54281CAE17AE00218EE3 /* LaunchScreen.storyboard in Resources */,
 				C88D29311CB2AAC10051D460 /* Assets.xcassets in Resources */,
 				C8F8C9EA1CB35C470008BA2E /* MainVCSettings.json in Resources */,
+				C87980751CB49A3B001FB715 /* PopcoverViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,6 +376,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C87980771CB4A12F001FB715 /* PopverPresentationController.swift in Sources */,
 				C8F8C9E61CB354D20008BA2E /* ProfileTableViewController.swift in Sources */,
 				C8F8C9E01CB354A40008BA2E /* HomeTableViewController.swift in Sources */,
 				C8F8C9ED1CB395E10008BA2E /* BaseTableViewController.swift in Sources */,
@@ -369,6 +388,7 @@
 				C87980701CB40B6E001FB715 /* UIBarButtonItem+category.swift in Sources */,
 				C8F8C9DE1CB3548C0008BA2E /* MainViewController.swift in Sources */,
 				C87980721CB411BE001FB715 /* TitleButton.swift in Sources */,
+				C87980791CB4A550001FB715 /* PopverViewController.swift in Sources */,
 				C8F8C9EB1CB35C470008BA2E /* NullViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -505,7 +525,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = MZWeibo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = NNMM.MZWeibo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -518,7 +538,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = MZWeibo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = NNMM.MZWeibo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
