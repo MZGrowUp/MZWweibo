@@ -24,7 +24,6 @@ class HomeTableViewController: BaseTableViewController {
         //注册通知，监听通知
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "change", name: PopoverAnimationWillshow, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "change", name: PopoverAnimationWilldismiss, object: nil)
-        
     }
     deinit{
         //移除通知
@@ -58,7 +57,10 @@ class HomeTableViewController: BaseTableViewController {
         print(__FUNCTION__)
     }
     func rightBtnClick(){
-        print(__FUNCTION__)
+//        print(__FUNCTION__)
+        let qrsb = UIStoryboard(name: "QRCodeViewController", bundle: nil)
+        let qrVC = qrsb.instantiateInitialViewController()
+        presentViewController(qrVC!, animated: true, completion: nil)
     }
     private func setUpNavgation(){
     //"navigationbar_friendattention"
