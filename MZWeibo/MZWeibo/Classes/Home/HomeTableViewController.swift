@@ -21,17 +21,34 @@ class HomeTableViewController: BaseTableViewController {
         }
         //初始化导航条
         setUpNavgation()
+        //注册通知，监听通知
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "change", name: PopoverAnimationWillshow, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "change", name: PopoverAnimationWilldismiss, object: nil)
+        
+    }
+    deinit{
+        //移除通知
+        NSNotificationCenter.defaultCenter().removeObserver(self)
+    }
+    /**
+     修改标题按钮的状态
+     */
+    func change(){
+        //修改标题按钮的状态
+        let titleBtn = navigationItem.titleView as! TitleButton
+        titleBtn.selected = !titleBtn.selected
     }
     func titleBtnClick(btn: TitleButton){
         //1、修改箭头的方向
-        btn.selected = !btn.selected
+//        btn.selected = !btn.selected
         //2、弹出菜单
         let pop_sb = UIStoryboard(name: "PopcoverViewController", bundle: nil)
         let vc = pop_sb.instantiateInitialViewController()
         //2.1设置转场代理
         //默认情况下model会移除以前控制器的view，替换为当前控制器的view
         //如果自定义转场，就不会移除以前的控制器的view
-        vc?.transitioningDelegate = self
+//        vc?.transitioningDelegate = self
+        vc?.transitioningDelegate = popverAnimatior
         //2.2设置转场样式
         vc?.modalPresentationStyle = UIModalPresentationStyle.Custom
         presentViewController(vc!, animated: true, completion: nil)
@@ -58,7 +75,7 @@ class HomeTableViewController: BaseTableViewController {
         navigationItem.titleView = titleBtn
         
     }
-    /*
+/*
     private func creatBarButton(imageName: String, target: AnyObject?, action: Selector)->UIBarButtonItem{
         let btn = UIButton()
         btn.setImage(UIImage(named: imageName), forState: UIControlState.Normal)
@@ -68,105 +85,12 @@ class HomeTableViewController: BaseTableViewController {
         return UIBarButtonItem(customView: btn)
     }
 */
-    /// 记录当前是否展开
-    var ispresent: Bool = false
+    //MARK: - 懒加载 
+    //一定要定义一个属性来保存自定义转场对象，否则会报错
+    private lazy var popverAnimatior: PopoverAnimation = {
+       let pa = PopoverAnimation()
+        pa.pressentFrame = CGRect(x: 100, y: 56, width: 200, height: 350)
+        return pa
+    }()
 }
 // MARK: - UIViewControllerTransitioningDelegate
-extension HomeTableViewController: UIViewControllerTransitioningDelegate,UIViewControllerAnimatedTransitioning
-{
-    //实现代理方法，谁来负责转场动画
-    //UIPresentationController 是iOS8专门负责转场动画的
-    func presentationControllerForPresentedViewController(presented: UIViewController, presentingViewController presenting: UIViewController, sourceViewController source: UIViewController) -> UIPresentationController?
-    {
-        
-        return PopverPresentationController(presentedViewController: presented, presentingViewController: presenting)
-        
-    }
-    //MARK: - 只要实现了以下方法，那么系统自带的默认动画就没有了，所以东西都需要程序猿自己来实现
-    /**
-     告诉系统谁来负责model的展现动画
-     
-     - parameter presented:  被展现的视图
-     - parameter presenting: 发起的视图
-     - parameter source:
-     
-     - returns: 谁来负责
-     */
-    func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning?
-    {
-        ispresent = true
-        return self
-    }
-    /**
-     告诉系统谁来负责model的消失动画
-     
-     - parameter dismissed: 被关闭的视图
-     
-     - returns: 谁。。。
-     */
-    func animationControllerForDismissedController(dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning?
-    {
-        ispresent = false
-        return self
-    }
-    //MARK: - UIViewControllerAnimatedTransitioning
-    /**
-    返回动画时长
-    
-    - parameter transitionContext: 上下文，里面保存了动画的所有参数
-    
-    - returns: 动画时长
-    */
-    func transitionDuration(transitionContext: UIViewControllerContextTransitioning?) -> NSTimeInterval
-    {
-        return 1
-    }
-    
-    func animateTransition(transitionContext: UIViewControllerContextTransitioning)
-    {
-        //1、拿到展现的视图
-//        let toVC = transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey)
-//        let fromVC = transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey)
-        //通过打印发现需要修改的就是toVC上面的View
-//        print(toVC)
-//        print(fromVC)
-        if ispresent
-        {
-            print("展开")
-            let toView = transitionContext.viewForKey(UITransitionContextToViewKey)!
-            toView.transform = CGAffineTransformMakeScale(1.0, 0.0)
-            //注意：一定要将视图添加到容器上
-            transitionContext.containerView()?.addSubview(toView)
-            //设置锚点
-            toView.layer.anchorPoint = CGPoint(x: 0.5, y: 0)
-            //2、执行动画
-            UIView.animateWithDuration(0.5, animations: { () -> Void in
-                //清空transform
-                toView.transform = CGAffineTransformIdentity
-                }) { (_) -> Void in
-                    //动画执行完毕，一定要告诉系统
-                    //如果不写，可能发生未知的错误
-                    transitionContext.completeTransition(true)
-            }
-
-        }else
-        {
-            print("关闭")
-            //需要关闭
-            let fromView = transitionContext.viewForKey(UITransitionContextFromViewKey)!
-            UIView.animateWithDuration(0.2, animations: { () -> Void in
-                //压扁
-                //注意：由于CGFloat是不准确的，所以如果写0.0会没有动画
-                fromView.transform = CGAffineTransformMakeScale(1.0, 0.000001)
-                }, completion: { (_) -> Void in
-                    //动画执行完毕，一定要告诉系统
-                    //如果不写，可能发生未知的错误
-                    transitionContext.completeTransition(true)
-    
-            })
-
-        }
-    
-   }
-
-}
