@@ -56,7 +56,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
                                     </imageView>
                                 </subviews>
-                                <color key="backgroundColor" red="0.97690927869999999" green="0.66653583090000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="300" id="5hj-cb-mPG"/>
                                     <constraint firstItem="D4j-e1-Eg7" firstAttribute="centerX" secondItem="l7T-2y-Ndd" secondAttribute="centerX" id="MIj-4p-Ovh"/>
@@ -66,14 +66,23 @@
                                     <constraint firstAttribute="width" constant="300" id="o06-dH-jFD"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="扫描之后即可显示数据" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e7b-N8-tCp">
+                                <rect key="frame" x="215" y="104" width="170" height="20.5"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.18033405172413794" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="e7b-N8-tCp" firstAttribute="top" secondItem="YTG-7W-958" secondAttribute="bottom" constant="40" id="2rQ-jR-nDE"/>
                             <constraint firstItem="X1t-wp-yzl" firstAttribute="leading" secondItem="v2g-B6-0h7" secondAttribute="leading" id="Qdz-cm-FVW"/>
                             <constraint firstItem="5dz-o5-eMG" firstAttribute="top" secondItem="X1t-wp-yzl" secondAttribute="bottom" id="RwN-TS-ZRv"/>
                             <constraint firstItem="l7T-2y-Ndd" firstAttribute="centerX" secondItem="v2g-B6-0h7" secondAttribute="centerX" id="TpH-OQ-iNI"/>
                             <constraint firstAttribute="trailing" secondItem="X1t-wp-yzl" secondAttribute="trailing" id="dLs-OD-tX9"/>
                             <constraint firstItem="l7T-2y-Ndd" firstAttribute="centerY" secondItem="v2g-B6-0h7" secondAttribute="centerY" id="jDa-Sc-Brb"/>
+                            <constraint firstItem="e7b-N8-tCp" firstAttribute="centerX" secondItem="v2g-B6-0h7" secondAttribute="centerX" id="rGd-45-YdY"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="8Bo-Dh-Owx">
@@ -87,6 +96,7 @@
                     <connections>
                         <outlet property="containerHeightCons" destination="5hj-cb-mPG" id="zD5-nv-nHl"/>
                         <outlet property="customerTabBar" destination="X1t-wp-yzl" id="tCX-MH-Zsr"/>
+                        <outlet property="resultLabel" destination="e7b-N8-tCp" id="wAe-Aj-FkM"/>
                         <outlet property="scanLineCons" destination="lXw-Bk-cy5" id="PF2-CW-48G"/>
                         <outlet property="scanLineView" destination="D4j-e1-Eg7" id="awr-ss-9lO"/>
                     </connections>
