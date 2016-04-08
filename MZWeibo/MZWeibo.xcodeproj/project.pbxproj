@@ -20,8 +20,10 @@
 		C87F4F271CB622C600717EB6 /* QRCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87F4F261CB622C600717EB6 /* QRCodeViewController.swift */; };
 		C88D29311CB2AAC10051D460 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C88D29301CB2AAC10051D460 /* Assets.xcassets */; };
 		C8B831251CB5063700AB0CDD /* PopoverAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B831241CB5063700AB0CDD /* PopoverAnimation.swift */; };
+		C8E5897B1CB756600046EE8E /* QRCodeCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E5897A1CB756600046EE8E /* QRCodeCardViewController.swift */; };
 		C8F6D29F1CB3997E00DA08C7 /* VisitorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F6D29E1CB3997E00DA08C7 /* VisitorView.swift */; };
 		C8F6D2A11CB39F4400DA08C7 /* UIView+AutoLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F6D2A01CB39F4400DA08C7 /* UIView+AutoLayout.swift */; };
+		C8F8AB6E1CB78EF3004A6715 /* MM.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C8F8AB6D1CB78EF3004A6715 /* MM.jpg */; };
 		C8F8C9DE1CB3548C0008BA2E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F8C9DD1CB3548C0008BA2E /* MainViewController.swift */; };
 		C8F8C9E01CB354A40008BA2E /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F8C9DF1CB354A40008BA2E /* HomeTableViewController.swift */; };
 		C8F8C9E21CB354AF0008BA2E /* DiscoverTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F8C9E11CB354AF0008BA2E /* DiscoverTableViewController.swift */; };
@@ -69,8 +71,10 @@
 		C87F4F261CB622C600717EB6 /* QRCodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCodeViewController.swift; sourceTree = "<group>"; };
 		C88D29301CB2AAC10051D460 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C8B831241CB5063700AB0CDD /* PopoverAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopoverAnimation.swift; sourceTree = "<group>"; };
+		C8E5897A1CB756600046EE8E /* QRCodeCardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCodeCardViewController.swift; sourceTree = "<group>"; };
 		C8F6D29E1CB3997E00DA08C7 /* VisitorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisitorView.swift; sourceTree = "<group>"; };
 		C8F6D2A01CB39F4400DA08C7 /* UIView+AutoLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+AutoLayout.swift"; sourceTree = "<group>"; };
+		C8F8AB6D1CB78EF3004A6715 /* MM.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = MM.jpg; sourceTree = "<group>"; };
 		C8F8C9DD1CB3548C0008BA2E /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		C8F8C9DF1CB354A40008BA2E /* HomeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
 		C8F8C9E11CB354AF0008BA2E /* DiscoverTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverTableViewController.swift; sourceTree = "<group>"; };
@@ -134,6 +138,7 @@
 				C85F54261CAE17AE00218EE3 /* LaunchScreen.storyboard */,
 				C85F54291CAE17AE00218EE3 /* Info.plist */,
 				C88D29301CB2AAC10051D460 /* Assets.xcassets */,
+				C8F8AB6D1CB78EF3004A6715 /* MM.jpg */,
 			);
 			path = MZWeibo;
 			sourceTree = "<group>";
@@ -172,6 +177,7 @@
 			children = (
 				C87F4F241CB61FCF00717EB6 /* QRCodeViewController.storyboard */,
 				C87F4F261CB622C600717EB6 /* QRCodeViewController.swift */,
+				C8E5897A1CB756600046EE8E /* QRCodeCardViewController.swift */,
 			);
 			path = QRCode;
 			sourceTree = "<group>";
@@ -369,6 +375,7 @@
 				C85F54281CAE17AE00218EE3 /* LaunchScreen.storyboard in Resources */,
 				C88D29311CB2AAC10051D460 /* Assets.xcassets in Resources */,
 				C8F8C9EA1CB35C470008BA2E /* MainVCSettings.json in Resources */,
+				C8F8AB6E1CB78EF3004A6715 /* MM.jpg in Resources */,
 				C87F4F251CB61FCF00717EB6 /* QRCodeViewController.storyboard in Resources */,
 				C87980751CB49A3B001FB715 /* PopcoverViewController.storyboard in Resources */,
 			);
@@ -401,6 +408,7 @@
 				C8F8C9E01CB354A40008BA2E /* HomeTableViewController.swift in Sources */,
 				C8F8C9ED1CB395E10008BA2E /* BaseTableViewController.swift in Sources */,
 				C85F541E1CAE17AE00218EE3 /* AppDelegate.swift in Sources */,
+				C8E5897B1CB756600046EE8E /* QRCodeCardViewController.swift in Sources */,
 				C8F8C9E41CB354C60008BA2E /* MessageTableViewController.swift in Sources */,
 				C8F6D2A11CB39F4400DA08C7 /* UIView+AutoLayout.swift in Sources */,
 				C8F8C9E21CB354AF0008BA2E /* DiscoverTableViewController.swift in Sources */,

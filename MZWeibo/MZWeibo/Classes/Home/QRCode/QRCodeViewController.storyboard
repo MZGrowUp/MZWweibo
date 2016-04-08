@@ -73,14 +73,24 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7EO-ic-782">
+                                <rect key="frame" x="270" y="474" width="60" height="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="我的名片" backgroundImage="qrcode_button_background"/>
+                                <connections>
+                                    <action selector="myCardBtnClick:" destination="ePa-Ae-xgg" eventType="touchUpInside" id="ObN-a6-eEh"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="7EO-ic-782" firstAttribute="top" secondItem="l7T-2y-Ndd" secondAttribute="bottom" constant="24" id="2iF-cS-dXM"/>
                             <constraint firstItem="e7b-N8-tCp" firstAttribute="top" secondItem="YTG-7W-958" secondAttribute="bottom" constant="40" id="2rQ-jR-nDE"/>
                             <constraint firstItem="X1t-wp-yzl" firstAttribute="leading" secondItem="v2g-B6-0h7" secondAttribute="leading" id="Qdz-cm-FVW"/>
                             <constraint firstItem="5dz-o5-eMG" firstAttribute="top" secondItem="X1t-wp-yzl" secondAttribute="bottom" id="RwN-TS-ZRv"/>
                             <constraint firstItem="l7T-2y-Ndd" firstAttribute="centerX" secondItem="v2g-B6-0h7" secondAttribute="centerX" id="TpH-OQ-iNI"/>
                             <constraint firstAttribute="trailing" secondItem="X1t-wp-yzl" secondAttribute="trailing" id="dLs-OD-tX9"/>
+                            <constraint firstItem="7EO-ic-782" firstAttribute="centerX" secondItem="v2g-B6-0h7" secondAttribute="centerX" id="eph-KZ-Vjg"/>
                             <constraint firstItem="l7T-2y-Ndd" firstAttribute="centerY" secondItem="v2g-B6-0h7" secondAttribute="centerY" id="jDa-Sc-Brb"/>
                             <constraint firstItem="e7b-N8-tCp" firstAttribute="centerX" secondItem="v2g-B6-0h7" secondAttribute="centerX" id="rGd-45-YdY"/>
                         </constraints>
@@ -108,6 +118,7 @@
     </scenes>
     <resources>
         <image name="qrcode_border" width="51" height="51"/>
+        <image name="qrcode_button_background" width="34" height="32"/>
         <image name="qrcode_scanline_barcode" width="248" height="124"/>
         <image name="qrcode_tabbar_icon_barcode" width="40" height="40"/>
         <image name="qrcode_tabbar_icon_qrcode_highlighted" width="40" height="40"/>
